@@ -1,0 +1,41 @@
+git init >> Inicia um novo repositório git;
+git add Controller.php >> Adiciona um  arquivo a "staging area";
+git add . >> Adiciona todos os arquivos do repositório a "staging area";
+git commit -m "mensagem" >> Faz um commit;
+git commit -am "mensagem" >> Adicionar arquivo a "staging area" e fazer commit ao mesmo tempo;
+git commit  --amend >> Alterar último commit;
+git commit --amend -m "Mensagem" >> Fazer commit alterando o último.
+-------------------------------------------------------------------------------------------
+
+git log >> Mostra histórico de commits;
+git log --author >> Filtrar commits por autor;
+git log --grep="termo de busca" >> Filtrar commits por palavras chave;
+git log --oneline >> Filtrar commits mostrando apenas uma linha para cada um deles;
+git log --graph -- oneline --decorate --all >> Log de todas as branchs apontando para o "HEAD".
+--------------------------------------------------------------------------------------------
+
+git diff Controller.php >> Compara arquivos de "working directory";
+git diff --staged Controller.php >> Compara arquivos do "working directory" com arquivos da "staging area".
+--------------------------------------------------------------------------------------------
+
+git rm Controller.php >> Remover arquivos;
+git mv Controller.php NovoController.php >> Renomear arquivos;
+git mv Controller.php novoController/NovoController.php >> Mover arquivos.
+--------------------------------------------------------------------------------------------
+
+git checkout --Controller.php >> Restaura a última versão do arquivo em "working directory"
+git reset HEAD Controller.php >> Remover arquivo da "staging area" e enviar para "working directory"
+--------------------------------------------------------------------------------------------
+
+git clean -n >> verificar os arquivos que desejamos remover do "working directory"
+git clean -f >> forçar remoção de arquivos do "working directory"
+--------------------------------------------------------------------------------------------
+
+git checkout 3cb747f --Controller.php >> Recuperar um arquivo específico
+--------------------------------------------------------------------------------------------
+
+Desfazendo commits:
+
+git reset --soft  3cb747f
+git reset --mixed 3cb747f
+git reset --hard 3cb747f
